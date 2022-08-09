@@ -11,39 +11,43 @@
   </head>
 
   <body>
-    <h1>IMC-V2</h1>
+    <section class="container">
 
-    <p>
-      <label for="input-weight">Informe o seu peso (kg):</label>
-      <input
-        id="input-weight"
-        type="number"
-        min="10"
-        max="200"
-        step="0.1"
-        value="65"
-      />
-    </p>
+      <h1>IMC-V2</h1>
 
-    <p>
-      <label for="input-height">Informe a sua altura (m):</label>
-      <input
-        id="input-height"
-        type="number"
-        min="1"
-        max="3"
-        step="0.01"
-        value="1.5"
-      />
-    </p>
+      <p>
+        <label for="input-weight">Informe o seu peso (kg):</label>
+        <input
+          id="input-weight"
+          type="number"
+          min="10"
+          max="200"
+          step="0.1"
+          value="65"
+        />
+      </p>
 
-    <p>
-      <button id="button-calculate-imc">Calcular IMC</button>
-    </p>
+      <p>
+        <label for="input-height">Informe a sua altura (m):</label>
+        <input
+          id="input-height"
+          type="number"
+          min="1"
+          max="3"
+          step="0.01"
+          value="1.5"
+        />
+      </p>
 
-    <p id="p-imc">O seu IMC é <strong id="imc-result"></strong></p>
+      <p>
+        <button id="button-calculate-imc">Calcular IMC</button>
+      </p>
 
-    <p>Este valor considera que você está na faixa <strong id="range"></strong></p>
+      <p id="p-imc">O seu IMC é <strong id="imc-result"></strong></p>
+
+      <p>Este valor considera que você está na faixa <strong id="range"></strong></p>
+
+    </section>
 
     <script defer src="./js/script.js"></script>
   </body>

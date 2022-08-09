@@ -21,7 +21,7 @@ function handleCalculateImc() {
   resultImc.textContent = imc.toFixed(2).replace('.', ',');
 
   var msg = document.querySelector('#range');
-  msg.textContent = range(imc);
+  msg.textContent = range(imc.toFixed(1));
   
   
 
@@ -31,28 +31,33 @@ function range(imc){
   
   var resultRange = '';
 
-   
-    if (imc >= 16 && imc <= 16.9) {
-      resultRange = 'Muito abaixo do peso';
-    } else resultRange = 'inválido'
-    if (imc >= 17 && imc <= 18.4) {
-      resultRange = 'Abaixo do peso';
-    }
-    if (imc >= 18.5 && imc <= 24,9){
-      resultRange = 'Peso normal';
-    }
-    if (imc >= 25  && imc <= 29.9) {
-      resultRange = 'Acima do peso';
-    }
-    if (imc >= 30 && imc <= 34.9) {
-      resultRange = 'Obesidade grau I';
-    }
-    if (imc >= 35 && imc <= 40){
-      resultRange = 'Obsidade grau II';
-    }
-    if (imc > 40) {
-      resultRange = 'Obsidade grau III';
-    }
+  console.log(parseFloat(imc))
+
+
+  if (parseFloat(imc) < 16) {
+    resultRange = 'inválido';
+  }   
+  if (parseFloat(imc) >= 16 && parseFloat(imc) <= 16.9) {
+    resultRange = 'Muito abaixo do peso';
+  } 
+  if (parseFloat(imc) >= 17 && parseFloat(imc) <= 18.4) {
+    resultRange = 'Abaixo do peso';
+  }
+  if (parseFloat(imc) >= 18.5 && parseFloat(imc) <= 24.9){
+    resultRange = 'Peso normal';
+  }
+  if (parseFloat(imc) >= 25  && parseFloat(imc) <= 29.9) {
+    resultRange = 'Acima do peso';
+  }
+  if (parseFloat(imc) >= 30 && parseFloat(imc) <= 34.9) {
+    resultRange = 'Obesidade grau I';
+  }
+  if (parseFloat(imc) >= 35 && parseFloat(imc) <= 40){
+    resultRange = 'Obsidade grau II';
+  }
+  if (parseFloat(imc) > 40) {
+    resultRange = 'Obsidade grau III';
+  }
     
   return resultRange;
 }
